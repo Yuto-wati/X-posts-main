@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>take / 01 / 2 | X-posts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f3f4f6; padding: 40px; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        
+        .card { 
+            width: 540px; /* Xの画像比率(4:5)に合わせやすい幅 */
+            min-height: 675px; 
+            background: white; 
+            margin: 0 auto 60px auto; 
+            padding: 30px 35px; 
+            box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
+            border-radius: 24px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Header */
+        .header { 
+            display: flex; align-items: center; justify-content: space-between; 
+            margin-bottom: 20px; 
+            border-bottom: 4px solid; 
+            padding-bottom: 12px;
+        }
+        .title { font-size: 1.6rem; font-weight: 900; letter-spacing: -0.02em; }
+        .num-badge { 
+            color: white; padding: 4px 14px; 
+            border-radius: 9999px; font-weight: 800; font-size: 0.9rem;
+            font-family: 'Poppins', sans-serif; letter-spacing: 0.05em;
+        }
+
+        /* Table */
+        table { width: 100%; border-collapse: collapse; }
+        th { 
+            text-align: left; color: #94a3b8; font-size: 0.7rem; font-weight: 700;
+            padding-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;
+        }
+        td { 
+            padding: 6px 0; /* 少し詰める */
+            border-bottom: 1px solid #f1f5f9; 
+            vertical-align: baseline;
+            font-size: 0.9rem;
+        }
+        /* Group 1は項目が多いのでさらに詰める */
+        .dense td { padding: 4px 0; font-size: 0.85rem; }
+        
+        .no { font-family: 'Poppins', sans-serif; font-weight: 600; color: #cbd5e1; font-size: 0.8rem; }
+        .phr { font-family: 'Poppins', sans-serif; font-weight: 700; padding-right: 10px; white-space: nowrap; }
+        .mean { font-weight: 500; color: #475569; letter-spacing: -0.02em; line-height: 1.4; }
+
+        /* Footer */
+        .footer { 
+            position: absolute; bottom: 20px; right: 30px; 
+            font-size: 0.8rem; color: #cbd5e1; font-weight: 800; 
+            font-family: 'Poppins', sans-serif; letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        
+        /* Theme 1: Emerald (Basic) */
+        .theme-1 .header { border-color: #10b981; color: #065f46; }
+        .theme-1 .num-badge { background: #10b981; }
+        .theme-1 .phr { color: #059669; }
+        
+        /* Theme 2: Sky (Business) */
+        .theme-2 .header { border-color: #0ea5e9; color: #075985; }
+        .theme-2 .num-badge { background: #0ea5e9; }
+        .theme-2 .phr { color: #0284c7; }
+
+        /* Theme 3: Amber (Polysemy) */
+        .theme-3 .header { border-color: #f59e0b; color: #92400e; }
+        .theme-3 .num-badge { background: #f59e0b; }
+        .theme-3 .phr { color: #d97706; }
+
+        /* Theme 4: Violet (Advanced) */
+        .theme-4 .header { border-color: #8b5cf6; color: #5b21b6; }
+        .theme-4 .num-badge { background: #8b5cf6; }
+        .theme-4 .phr { color: #7c3aed; }
+        
+        /* Special Labels */
+        .tag-re {
+            display: inline-block; font-size: 0.65rem; padding: 1px 5px; border-radius: 4px;
+            background: #f1f5f9; color: #64748b; margin-left: 5px; font-weight: bold;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CARD 1: Basic (Emerald) -->
+    <div class="card theme-1">
+        <div class="header">
+            <div class="title">TAKE - Basic & Daily</div>
+            <div class="num-badge">1 / 4</div>
+        </div>
+        <table class="dense">
+            <tr><th style="width:8%">No.</th><th style="width:32%">Phrase</th><th>Meaning</th></tr>
+            <tr><td class="no">01</td><td class="phr">take off</td><td class="mean">脱ぐ／離陸する／休みを取る</td></tr>
+            <tr><td class="no">02</td><td class="phr">take back</td><td class="mean">撤回する／取り戻す／返品する</td></tr>
+            <tr><td class="no">03</td><td class="phr">take out</td><td class="mean">取り出す／外食する／加入する</td></tr>
+            <tr><td class="no">04</td><td class="phr">take up</td><td class="mean">始める／占める／取り上げる</td></tr>
+            <tr><td class="no">05</td><td class="phr">take down</td><td class="mean">取り外す／書き留める／解体する</td></tr>
+            <tr><td class="no">06</td><td class="phr">take away</td><td class="mean">持ち去る／奪う／テイクアウト</td></tr>
+            <tr><td class="no">07</td><td class="phr">take apart</td><td class="mean">分解する／批判する</td></tr>
+            <tr><td class="no">08</td><td class="phr">take along</td><td class="mean">連れて行く／持って行く</td></tr>
+            <tr><td class="no">09</td><td class="phr">take after</td><td class="mean">〜に似ている</td></tr>
+            <tr><td class="no">10</td><td class="phr">take over</td><td class="mean">引き継ぐ／乗っ取る</td></tr>
+            <tr><td class="no">11</td><td class="phr">take to</td><td class="mean">好きになる／習慣がつく</td></tr>
+            <tr><td class="no">12</td><td class="phr">take for</td><td class="mean">〜だと思う／間違える</td></tr>
+            <tr><td class="no">13</td><td class="phr">take it easy</td><td class="mean">気楽にやる／休む</td></tr>
+            <tr><td class="no">14</td><td class="phr">take time</td><td class="mean">時間をかける</td></tr>
+            <tr><td class="no">15</td><td class="phr">take it out on</td><td class="mean">八つ当たりする</td></tr>
+            <tr><td class="no">16</td><td class="phr">take turns</td><td class="mean">交代する</td></tr>
+            <tr><td class="no">17</td><td class="phr">take place</td><td class="mean">起こる／行われる</td></tr>
+            <tr><td class="no">18</td><td class="phr">take care of</td><td class="mean">世話をする／対処する</td></tr>
+            <tr><td class="no">19</td><td class="phr">take a look at</td><td class="mean">〜を見る</td></tr>
+        </table>
+        <div class="footer">LEVEL 01 : BASIC</div>
+    </div>
+
+    <!-- CARD 2: Business (Sky) -->
+    <div class="card theme-2">
+        <div class="header">
+            <div class="title">TAKE - Business</div>
+            <div class="num-badge">2 / 4</div>
+        </div>
+        <table>
+            <tr><th style="width:8%">No.</th><th style="width:42%">Phrase</th><th>Meaning</th></tr>
+            <tr><td class="no">20</td><td class="phr">take charge of</td><td class="mean">〜の責任を取る／担当する</td></tr>
+            <tr><td class="no">21</td><td class="phr">take part in</td><td class="mean">〜に参加する</td></tr>
+            <tr><td class="no">22</td><td class="phr">take action</td><td class="mean">行動を起こす／措置を取る</td></tr>
+            <tr><td class="no">23</td><td class="phr">take steps</td><td class="mean">段階的措置を取る</td></tr>
+            <tr><td class="no">24</td><td class="phr">take measures</td><td class="mean">対策を講じる</td></tr>
+            <tr><td class="no">25</td><td class="phr">take effect</td><td class="mean">効力を発する／効果が出る</td></tr>
+            <tr><td class="no">26</td><td class="phr">take note of</td><td class="mean">〜に注目する／書き留める</td></tr>
+            <tr><td class="no">27</td><td class="phr">take priority</td><td class="mean">優先される</td></tr>
+            <tr><td class="no">28</td><td class="phr">take the lead</td><td class="mean">主導権を取る／先頭に立つ</td></tr>
+            <tr><td class="no">29</td><td class="phr">take into ...</td><td class="mean">〜を考慮に入れる (consideration)</td></tr>
+            <tr><td class="no">30</td><td class="phr">take resp. for</td><td class="mean">〜の責任を取る (responsibility)</td></tr>
+            <tr><td class="no">31</td><td class="phr">take a diff...</td><td class="mean">異なるアプローチを取る</td></tr>
+            <tr><td class="no">32</td><td class="phr">take minutes</td><td class="mean">議事録を取る</td></tr>
+            <tr><td class="no">33</td><td class="phr">take stock of</td><td class="mean">〜を評価する／棚卸しする</td></tr>
+        </table>
+        <div class="footer">LEVEL 02 : BUSINESS</div>
+    </div>
+
+    <!-- CARD 3: Polysemy (Amber) -->
+    <div class="card theme-3">
+        <div class="header">
+            <div class="title">TAKE - Polysemy</div>
+            <div class="num-badge">3 / 4</div>
+        </div>
+        <table>
+            <tr><th style="width:8%">No.</th><th style="width:35%">Phrase</th><th>Meaning</th></tr>
+            <tr><td class="no">34</td><td class="phr">take in</td><td class="mean">理解する／だます／引き取る</td></tr>
+            <tr><td class="no">35</td><td class="phr">take on</td><td class="mean">引き受ける／雇う／帯びる</td></tr>
+            <tr><td class="no">36</td><td class="phr">take off <span class="tag-re">再</span></td><td class="mean">脱ぐ vs 離陸 vs 急成長</td></tr>
+            <tr><td class="no">37</td><td class="phr">take out <span class="tag-re">再</span></td><td class="mean">出す vs 加入 vs 連れ出す</td></tr>
+            <tr><td class="no">38</td><td class="phr">take over <span class="tag-re">再</span></td><td class="mean">引き継ぐ vs 乗っ取る</td></tr>
+        </table>
+        
+        <div class="mt-8 p-4 bg-amber-50 rounded-xl border border-amber-100">
+            <p class="text-amber-800 text-sm font-bold mb-2 flex items-center gap-2">
+                <span class="text-lg">⚠️</span> POINT
+            </p>
+            <p class="text-xs text-amber-700 leading-relaxed font-medium">
+                このグループは「文脈で意味が激変する」要注意フレーズです。<br>
+                take off（脱ぐ）と（急成長する）のように、プラスとマイナス、あるいは物理と抽象で使い分けが必要です。
+            </p>
+        </div>
+
+        <div class="footer">LEVEL 03 : NUANCE</div>
+    </div>
+
+    <!-- CARD 4: Advanced (Violet) -->
+    <div class="card theme-4">
+        <div class="header">
+            <div class="title">TAKE - Advanced</div>
+            <div class="num-badge">4 / 4</div>
+        </div>
+        <table>
+            <tr><th style="width:8%">No.</th><th style="width:45%">Phrase</th><th>Meaning</th></tr>
+            <tr><td class="no">39</td><td class="phr">take advantage of</td><td class="mean">〜を利用する／つけ込む</td></tr>
+            <tr><td class="no">40</td><td class="phr">take into account</td><td class="mean">〜を考慮に入れる</td></tr>
+            <tr><td class="no">41</td><td class="phr">take it for granted</td><td class="mean">〜を当然だと思う</td></tr>
+            <tr><td class="no">42</td><td class="phr">take issue with</td><td class="mean">〜に異議を唱える</td></tr>
+            <tr><td class="no">43</td><td class="phr">take a stand on</td><td class="mean">〜について立場を取る</td></tr>
+            <tr><td class="no">44</td><td class="phr">take precedence over</td><td class="mean">〜より優先される</td></tr>
+            <tr><td class="no">45</td><td class="phr">take exception to</td><td class="mean">〜に反対する</td></tr>
+            <tr><td class="no">46</td><td class="phr">take a toll on</td><td class="mean">〜に悪影響（損害）を与える</td></tr>
+        </table>
+        <div class="footer">LEVEL 04 : ADVANCED</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET Phrasal Verbs - SNS Cards</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans JP', sans-serif; background-color: #f3f4f6; padding: 40px; }
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        
+        .card { 
+            width: 540px; /* Xの画像比率(4:5)に最適化 */
+            min-height: 675px; 
+            background: white; 
+            margin: 0 auto 60px auto; 
+            padding: 30px 35px; 
+            box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
+            border-radius: 24px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Header */
+        .header { 
+            display: flex; align-items: center; justify-content: space-between; 
+            margin-bottom: 20px; 
+            border-bottom: 4px solid; 
+            padding-bottom: 12px;
+        }
+        .title { font-size: 1.6rem; font-weight: 900; letter-spacing: -0.02em; }
+        .num-badge { 
+            color: white; padding: 4px 14px; 
+            border-radius: 9999px; font-weight: 800; font-size: 0.9rem;
+            font-family: 'Poppins', sans-serif; letter-spacing: 0.05em;
+        }
+
+        /* Table */
+        table { width: 100%; border-collapse: collapse; }
+        th { 
+            text-align: left; color: #94a3b8; font-size: 0.7rem; font-weight: 700;
+            padding-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em;
+        }
+        td { 
+            padding: 8px 0; 
+            border-bottom: 1px solid #f1f5f9; 
+            vertical-align: baseline;
+            font-size: 0.9rem;
+        }
+        
+        /* 行数が多い場合の調整クラス */
+        .dense td { padding: 4.5px 0; font-size: 0.85rem; }
+        
+        .no { font-family: 'Poppins', sans-serif; font-weight: 600; color: #cbd5e1; font-size: 0.8rem; }
+        .phr { font-family: 'Poppins', sans-serif; font-weight: 700; padding-right: 10px; white-space: nowrap; }
+        .mean { font-weight: 500; color: #475569; letter-spacing: -0.02em; line-height: 1.35; }
+
+        /* Footer */
+        .footer { 
+            position: absolute; bottom: 20px; right: 30px; 
+            font-size: 0.8rem; color: #cbd5e1; font-weight: 800; 
+            font-family: 'Poppins', sans-serif; letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        
+        /* Theme 1: Blue (Basic) */
+        .theme-1 .header { border-color: #2563eb; color: #1e40af; }
+        .theme-1 .num-badge { background: #2563eb; }
+        .theme-1 .phr { color: #1d4ed8; }
+        
+        /* Theme 2: Sky (TOEIC) */
+        .theme-2 .header { border-color: #0ea5e9; color: #0369a1; }
+        .theme-2 .num-badge { background: #0ea5e9; }
+        .theme-2 .phr { color: #0284c7; }
+
+        /* Theme 3: Indigo (Business Hard) */
+        .theme-3 .header { border-color: #4f46e5; color: #3730a3; }
+        .theme-3 .num-badge { background: #4f46e5; }
+        .theme-3 .phr { color: #4338ca; }
+
+        /* Theme 4: Rose (Caution) */
+        .theme-4 .header { border-color: #e11d48; color: #9f1239; }
+        .theme-4 .num-badge { background: #e11d48; }
+        .theme-4 .phr { color: #be123c; }
+        
+        .tag-re {
+            display: inline-block; font-size: 0.65rem; padding: 1px 5px; border-radius: 4px;
+            background: #f1f5f9; color: #64748b; margin-left: 5px; font-weight: bold;
+            transform: translateY(-1px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CARD 1: Basic & Daily (Blue) -->
+    <!-- 0) 超頻出(12) + 1) 日常(7) = 19 items -->
+    <div class="card theme-1">
+        <div class="header">
+            <div class="title">GET - Basic & Daily</div>
+            <div class="num-badge">1 / 4</div>
+        </div>
+        <table class="dense">
+            <tr><th style="width:8%">No.</th><th style="width:32%">Phrase</th><th>Meaning</th></tr>
+            <tr><td class="no">01</td><td class="phr">get up</td><td class="mean">起きる</td></tr>
+            <tr><td class="no">02</td><td class="phr">get on</td><td class="mean">乗る／うまくいく／続ける</td></tr>
+            <tr><td class="no">03</td><td class="phr">get off</td><td class="mean">降りる／終える／免れる</td></tr>
+            <tr><td class="no">04</td><td class="phr">get in</td><td class="mean">入る／到着する</td></tr>
+            <tr><td class="no">05</td><td class="phr">get out</td><td class="mean">外に出る／漏れる</td></tr>
+            <tr><td class="no">06</td><td class="phr">get back</td><td class="mean">戻る／取り戻す／返信する</td></tr>
+            <tr><td class="no">07</td><td class="phr">get over</td><td class="mean">克服する／乗り越える</td></tr>
+            <tr><td class="no">08</td><td class="phr">get through</td><td class="mean">切り抜ける／電話がつながる</td></tr>
+            <tr><td class="no">09</td><td class="phr">get along</td><td class="mean">仲良くやる／進む</td></tr>
+            <tr><td class="no">10</td><td class="phr">get by</td><td class="mean">（なんとか）やっていく</td></tr>
+            <tr><td class="no">11</td><td class="phr">get away</td><td class="mean">逃げる／離れる</td></tr>
+            <tr><td class="no">12</td><td class="phr">get down</td><td class="mean">降りる／落ち込む</td></tr>
+            <!-- Divider -->
+            <tr><td colspan="3" style="border-bottom: 2px dashed #e2e8f0;"></td></tr>
+            <tr><td class="no">13</td><td class="phr">get together</td><td class="mean">集まる</td></tr>
+            <tr><td class="no">14</td><td class="phr">get into</td><td class="mean">入り込む／熱中する</td></tr>
+            <tr><td class="no">15</td><td class="phr">get out of</td><td class="mean">〜から出る／免れる／やめる</td></tr>
+            <tr><td class="no">16</td><td class="phr">get back to</td><td class="mean">戻る／折り返す</td></tr>
+            <tr><td class="no">17</td><td class="phr">get on with</td><td class="mean">続ける／取りかかる</td></tr>
+            <tr><td class="no">18</td><td class="phr">get off with</td><td class="mean">〜で済む（罰などが）</td></tr>
+            <tr><td class="no">19</td><td class="phr">get out ...</td><td class="mean">外出できるようになる (about)</td></tr>
+        </table>
+        <div class="footer">LEVEL 01 : BASIC</div>
+    </div>
+
+    <!-- CARD 2: TOEIC & Practical (Sky) -->
+    <!-- 2) TOEIC頻出(10) = 10 items -->
+    <div class="card theme-2">
+        <div class="header">
+            <div class="title">GET - TOEIC & Practical</div>
+            <div class="num-badge">2 / 4</div>
+        </div>
+        <table>
+            <tr><th style="width:8%">No.</th><th style="width:40%">Phrase</th><th>Meaning</th></tr>
+            <tr><td class="no">20</td><td class="phr">get ahead</td><td class="mean">出世する／先に進む</td></tr>
+            <tr><td class="no">21</td><td class="phr">get ahead of</td><td class="mean">〜に先んじる</td></tr>
+            <tr><td class="no">22</td><td class="phr">get around</td><td class="mean">移動する／広まる／回避する</td></tr>
+            <tr><td class="no">23</td><td class="phr">get around to</td><td class="mean">〜する時間を作る</td></tr>
+            <tr><td class="no">24</td><td class="phr">get down to</td><td class="mean">本格的に取りかかる</td></tr>
+            <tr><td class="no">25</td><td class="phr">get through to</td><td class="mean">分からせる／つながる</td></tr>
+            <tr><td class="no">26</td><td class="phr">get back up</td><td class="mean">バックアップする</td></tr>
+            <tr><td class="no">27</td><td class="phr">get in touch</td><td class="mean">連絡を取る</td></tr>
+            <tr><td class="no">28</td><td class="phr">get hold of</td><td class="mean">手に入れる／連絡がつく</td></tr>
+            <tr><td class="no">29</td><td class="phr">get rid of</td><td class="mean">処分する／なくす</td></tr>
+        </table>
+        <div class="mt-8 p-4 bg-sky-50 rounded-xl border border-sky-100">
+            <p class="text-sky-800 text-xs font-bold mb-1">💡 POINT</p>
+            <p class="text-xs text-sky-700 leading-relaxed font-medium">
+                TOEICやメールで頻出のセットです。特に <strong>get in touch</strong>（連絡）や <strong>get rid of</strong>（処分）は即答レベルにしておきましょう。
+            </p>
+        </div>
+        <div class="footer">LEVEL 02 : BUSINESS</div>
+    </div>
+
+    <!-- CARD 3: Advanced Business (Indigo) -->
+    <!-- 3) ビジネス硬め(13) = 13 items -->
+    <div class="card theme-3">
+        <div class="header">
+            <div class="title">GET - Advanced Business</div>
+            <div class="num-badge">3 / 4</div>
+        </div>
+        <table>
+            <tr><th style="width:8%">No.</th><th style="width:43%">Phrase</th><th>Meaning</th></tr>
+            <tr><td class="no">30</td><td class="phr">get across</td><td class="mean">（意図などを）伝える</td></tr>
+            <tr><td class="no">31</td><td class="phr">get along</td><td class="mean">進む／進展する</td></tr>
+            <tr><td class="no">32</td><td class="phr">get at</td><td class="mean">言いたいことは〜だ／たどり着く</td></tr>
+            <tr><td class="no">33</td><td class="phr">get away with</td><td class="mean">罰なしで済ませる</td></tr>
+            <tr><td class="no">34</td><td class="phr">get down</td><td class="mean">仕事モードに入る (to business)</td></tr>
+            <tr><td class="no">35</td><td class="phr">get in on</td><td class="mean">参加する／便乗する</td></tr>
+            <tr><td class="no">36</td><td class="phr">get out of hand</td><td class="mean">手に負えなくなる</td></tr>
+            <tr><td class="no">37</td><td class="phr">get through with</td><td class="mean">〜を終える（完了する）</td></tr>
+            <tr><td class="no">38</td><td class="phr">get worked up</td><td class="mean">興奮する／取り乱す</td></tr>
+            <tr><td class="no">39</td><td class="phr">get carried away</td><td class="mean">調子に乗る／夢中になりすぎる</td></tr>
+            <tr><td class="no">40</td><td class="phr">get bogged down</td><td class="mean">行き詰まる／泥沼化する</td></tr>
+            <tr><td class="no">41</td><td class="phr">get caught up in</td><td class="mean">巻き込まれる／夢中になる</td></tr>
+            <tr><td class="no">42</td><td class="phr">get tied up</td><td class="mean">手が離せない（多忙）</td></tr>
+        </table>
+        <div class="footer">LEVEL 03 : ADVANCED</div>
+    </div>
+
+    <!-- CARD 4: Polysemy & Caution (Rose) -->
+    <!-- 4) 注意組(5) = 5 items -->
+    <div class="card theme-4">
+        <div class="header">
+            <div class="title">GET - Polysemy (Caution)</div>
+            <div class="num-badge">4 / 4</div>
+        </div>
+        <table>
+            <tr><th style="width:8%">No.</th><th style="width:35%">Phrase</th><th>Meaning</th></tr>
+            <tr><td class="no">43</td><td class="phr">get on <span class="tag-re">再</span></td><td class="mean">乗る vs うまくいく vs 続ける</td></tr>
+            <tr><td class="no">44</td><td class="phr">get off <span class="tag-re">再</span></td><td class="mean">降りる vs 免れる vs 退勤する</td></tr>
+            <tr><td class="no">45</td><td class="phr">get through <span class="tag-re">再</span></td><td class="mean">克服 vs 電話開通 vs 読了</td></tr>
+            <tr><td class="no">46</td><td class="phr">get into <span class="tag-re">再</span></td><td class="mean">乗る vs ハマる vs 巻き込まれる</td></tr>
+            <tr><td class="no">47</td><td class="phr">get out <span class="tag-re">再</span></td><td class="mean">出る vs やめる vs 漏れる</td></tr>
+        </table>
+        
+        <div class="mt-8 p-5 bg-rose-50 rounded-xl border border-rose-100">
+            <p class="text-rose-800 text-sm font-bold mb-3 flex items-center gap-2">
+                <span class="text-lg">⚠️</span> 意味がブレる理由
+            </p>
+            <p class="text-sm text-rose-700 leading-relaxed font-medium mb-3">
+                get は「ある状態への変化（動き）」を表すため、後ろに来る言葉や文脈で意味が大きく変わります。
+            </p>
+            <ul class="list-disc pl-4 text-xs text-rose-600 space-y-1">
+                <li><strong>物理的な移動</strong>（車に乗る・降りる）</li>
+                <li><strong>状況の変化</strong>（電話がつながる・バレる）</li>
+                <li><strong>抽象的な進展</strong>（仕事が片付く・ハマる）</li>
+            </ul>
+        </div>
+
+        <div class="footer">LEVEL 04 : CAUTION</div>
+    </div>
+
+</body>
+</html>
+

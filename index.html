@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X-posts</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      background: #0f0f0f;
+      color: #ffffff;
+    }
+
+    header {
+      padding: 18px 16px;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      border-bottom: 1px solid #222;
+    }
+
+    .wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 18px 16px 40px;
+    }
+
+    .section {
+      margin-top: 18px;
+    }
+
+    .section h2 {
+      font-size: 14px;
+      margin: 0 0 12px 0;
+      opacity: 0.8;
+      letter-spacing: 0.04em;
+    }
+
+    .list {
+      display: grid;
+      gap: 12px;
+    }
+
+    .item {
+      display: block;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: #1a1a1a;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+      line-height: 1.5;
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .item:hover {
+      background: #242424;
+    }
+
+    .item .sub {
+      display: block;
+      font-size: 12px;
+      opacity: 0.6;
+      margin-top: 4px;
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      background: #222;
+      opacity: 0.9;
+      margin-left: 8px;
+      vertical-align: 1px;
+      letter-spacing: 0.04em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 26px 0 10px;
+      font-size: 12px;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+
+<body>
+  <header>X-posts</header>
+
+  <div class="wrap">
+    <div class="section">
+      <h2>Latest</h2>
+      <div class="list">
+        <a class="item" href="./take/01/1.html">
+          take / 01 / 1 <span class="pill">HTML</span>
+          <span class="sub">TAKE – Phrasal Verbs (Basic → Advanced)</span>
+        </a>
+
+        <a class="item" href="./get/01/1.html">
+          get / 01 / 1 <span class="pill">HTML</span>
+          <span class="sub">GET – Phrasal Verbs (Basic → Advanced)</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Collections</h2>
+      <div class="list">
+        <a class="item" href="./take/">
+          take <span class="pill">index</span>
+          <span class="sub">take/01, take/02… の一覧</span>
+        </a>
+
+        <a class="item" href="./take/01/">
+          take / 01 <span class="pill">index</span>
+          <span class="sub">01 内の投稿一覧（1.html, 2.html…）</span>
+        </a>
+
+        <a class="item" href="./get/">
+          get <span class="pill">index</span>
+          <span class="sub">get/01, get/02… の一覧</span>
+        </a>
+
+        <a class="item" href="./get/01/">
+          get / 01 <span class="pill">index</span>
+          <span class="sub">01 内の投稿一覧（1.html, 2.html…）</span>
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      Powered by GitHub Pages
+    </footer>
+  </div>
+</body>
+</html>
